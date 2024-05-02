@@ -1,0 +1,393 @@
+{
+  "last_node_id": 14,
+  "last_link_id": 45,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1290.707987932205,
+        105.495995853424
+      ],
+      "size": {
+        "0": 392.81646728515625,
+        "1": 124.1702651977539
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 43,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "title": "Decription Ouput",
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "A volleyball player is jumping to hit the ball over the net.\n"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 8,
+      "type": "PreviewImage",
+      "pos": [
+        1185,
+        446
+      ],
+      "size": {
+        "0": 535.5679321289062,
+        "1": 379.7639465332031
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 45
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 7,
+      "type": "ShowText|pysssss",
+      "pos": [
+        1292.707987932205,
+        280.4959958534242
+      ],
+      "size": {
+        "0": 399.81646728515625,
+        "1": 114.97026062011719
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 44,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "title": "Coordinate",
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "A volleyball player,233,16,375,338,the ball,172,48,233,102,the net,10,284,639,338"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 3,
+      "type": "LoadImage",
+      "pos": [
+        10.200009918212862,
+        127.19999322891228
+      ],
+      "size": [
+        315,
+        314.00000381469727
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            42
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "İmages (1) (1).png",
+        "image"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 14,
+      "type": "Write",
+      "pos": [
+        384,
+        382
+      ],
+      "size": [
+        364,
+        100
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            41
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Write"
+      },
+      "widgets_values": [
+        "describe the image."
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 12,
+      "type": "KosmosLoader",
+      "pos": [
+        391,
+        205
+      ],
+      "size": [
+        356,
+        103
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "links": [
+            39
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "processor",
+          "type": "CUSTOM",
+          "links": [
+            40
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KosmosLoader"
+      },
+      "widgets_values": [
+        "microsoft/kosmos-2-patch14-224",
+        "gpu"
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 13,
+      "type": "Kosmos2SamplerSimple",
+      "pos": [
+        841,
+        144
+      ],
+      "size": [
+        315,
+        170
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 42
+        },
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 39
+        },
+        {
+          "name": "processor",
+          "type": "CUSTOM",
+          "link": 40
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 41,
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "description",
+          "type": "STRING",
+          "links": [
+            43
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "coordinate",
+          "type": "STRING",
+          "links": [
+            44
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            45
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Kosmos2SamplerSimple"
+      },
+      "widgets_values": [
+        "",
+        true,
+        true,
+        false
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    }
+  ],
+  "links": [
+    [
+      39,
+      12,
+      0,
+      13,
+      1,
+      "CUSTOM"
+    ],
+    [
+      40,
+      12,
+      1,
+      13,
+      2,
+      "CUSTOM"
+    ],
+    [
+      41,
+      14,
+      0,
+      13,
+      3,
+      "STRING"
+    ],
+    [
+      42,
+      3,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      43,
+      13,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      44,
+      13,
+      1,
+      7,
+      0,
+      "STRING"
+    ],
+    [
+      45,
+      13,
+      2,
+      8,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Confyuı_Kosmos2_bbox_cut_nodes",
+      "bounding": [
+        -57,
+        -6,
+        1837,
+        857
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
