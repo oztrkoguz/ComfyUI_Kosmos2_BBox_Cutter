@@ -1,6 +1,3 @@
-![step5](https://github.com/ooguzzzz/ComfyUI_Kosmos2_BBox_Cutter/assets/101019436/5c760497-f677-4752-ab50-24a0a35cdd83)# Kosmos2_BBox_Cutter
-
-
 ## Usage 
 + For **Windows** and **Linux**
 ```
