@@ -2,4 +2,4 @@
 
 
 ## Usage 
--For Windows and Linux
++ For Windows and Linux
