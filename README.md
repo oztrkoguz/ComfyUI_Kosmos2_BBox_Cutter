@@ -3,4 +3,4 @@
 
 ## Usage 
 + For Windows and Linux
-  ``` cd custom_nodes                ```
+  ```python  cd custom_nodes                ```
